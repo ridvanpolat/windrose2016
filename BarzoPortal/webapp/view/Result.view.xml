@@ -1,0 +1,26 @@
+<mvc:View
+   controllerName="Barzo.controller.Result"
+   xmlns="sap.m"   
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:l="sap.ui.layout"
+   xmlns:core="sap.ui.core">
+   <Page id="page" showHeader="false">
+   		<Panel id="idPanel">
+		<FlexBox
+			height="100%"
+			alignItems="Center"
+			justifyContent="Center">
+			<items>
+				<l:VerticalLayout>
+							<FlexBox
+								alignItems="Center"
+								justifyContent="Center">				
+					<core:Icon src="sap-icon://sys-enter" size="7em" color="#031E48" />
+					</FlexBox>		
+					<Text id="idMessage" text="{messages>/message}" />
+				</l:VerticalLayout>	
+			</items>
+		</FlexBox>
+		</Panel>   			
+   </Page>
+</mvc:View>

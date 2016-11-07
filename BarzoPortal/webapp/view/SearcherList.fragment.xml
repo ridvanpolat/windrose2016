@@ -1,0 +1,43 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog title="{i18n>LogoValueHelpTitle}"
+         contentWidth="80%" contentHeight="100%"> 
+	<List items="{search>/ResearchersData}" id="idParcaList" mode="MultiSelect" showNoData="false" growing="true">
+		<CustomListItem>
+<!--			<customData>
+				<core:CustomData key="bgclass"
+					value="{ parts : [ {path: 'search>CurrentStep'}, {path: 'search>Silindi'} ], formatter: 'lib.fiori.util.common.CurrentStepToBackgroundColor'}"
+					writeToDom="true"/>
+			</customData>-->
+
+						<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="4" labelSpanS="12" columnsL="2"
+							columnsM="2">
+							<f:content>
+								<Image width="120px"
+									src="https://www.irbbarcelona.org/sites/default/files/styles/perfil300/public/people/2006/03/gonzalez_gonzalez.jpg?itok=0RiC8gKJ"
+									densityAware="false">
+									<layoutData>
+										<l:GridData span="L6 M12 S12"/>
+									</layoutData>
+								</Image>
+								<Label text="{i18n>Name}"/>
+								<Text text="{searchnName}"/>
+								<core:Title />
+								<Label text="{i18n>Keyword}"/>
+								<Text text="{search>keyword}"/>
+								<Label text="{i18n>publication_count}"/>
+								<Text text="{search>publicationcount}"/>
+								<Label text="{i18n>TFNumber}"/>
+								<Text text="{search>TFNumber}"/>
+								<Label text="{i18n>PFNumber}"/>
+								<Text text="{search>PFNumber}"/>
+							</f:content>
+						</f:SimpleForm>
+		</CustomListItem>
+	</List>
+		<buttons>
+		<Button text="{i18n>cancelButton}" press="handleSelectListCancel" />
+		<Button text="{i18n>selectButton}" press="handleSelectList" />
+	</buttons>
+	</Dialog>
+</core:FragmentDefinition>

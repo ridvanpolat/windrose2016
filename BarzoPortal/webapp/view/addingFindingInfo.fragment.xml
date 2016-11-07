@@ -1,0 +1,51 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<f:SimpleForm id="idProjeeDialogForm" editable="true" title="" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="4" labelSpanS="12"
+		columnsL="2" columnsM="1">
+		<f:content id="idProjeContent">
+			<Label id="idProjeAdiLabel" text="{i18n>ProjeName}"/>
+			<Input id="idProjeNameInput" value="{main>/ProjeName}">
+				<layoutData>
+					<l:GridData span="L4 M4 S12"/>
+				</layoutData>
+			</Input>
+			<Label id="idProjectCategoly" text="{i18n>ProjectCatagoly}"/>
+			<Input id="idProjectCategolyInput" value="{main>/ProjeCategoly}">
+				<layoutData>
+					<l:GridData span="L4 M4 S12"/>
+				</layoutData>
+			</Input>
+			<!--			<Label id="idProjectTopic" text="{i18n>ProjectKeyword}"/>
+			<Input id="idProjectTopicInput" value="{main>/ProjectTopic}">
+				<layoutData>
+					<l:GridData span="L4 M4 S12"/>
+				</layoutData>
+			</Input>-->
+			<Label id="idBudgetLabel" text="{i18n>Budget}"/>
+			<Input id="idBudgetInput" value="{main>/Budget}">
+				<layoutData>
+					<l:GridData span="L4 M4 S12"/>
+				</layoutData>
+			</Input>
+			<Label id="idStartDateLabel" text="{i18n>StartDate}"/>
+			<DatePicker id="idStartDateDatePicker" displayFormat="dd-MM-yyyy" valueFormat="yyyy-MM-dd" value="{main>/StartDate}">
+				<layoutData>
+					<l:GridData span="L4 M4 S12"/>
+				</layoutData>
+			</DatePicker>
+			<Label id="idEndDateLabel" text="{i18n>EndDate}"/>
+			<DatePicker id="idEndDateDatePicker" displayFormat="dd-MM-yyyy" valueFormat="yyyy-MM-dd" value="{main>/EndDate}">
+				<layoutData>
+					<l:GridData span="L4 M4 S12"/>
+				</layoutData>
+			</DatePicker>
+			<Label id="idResearchLabel" text="{i18n>Research}"/>
+			<Input id="idResearchKod" type="Text" showSuggestion="true" showValueHelp="true"
+				valueHelpRequest="handleResearchValueHelp" valueHelpOnly="true"
+				value="{main>/Researcher}">
+				<layoutData>
+					<l:GridData span="L4 M4 S12"/>
+				</layoutData>
+			</Input>
+		</f:content>
+	</f:SimpleForm>
+</core:FragmentDefinition>
